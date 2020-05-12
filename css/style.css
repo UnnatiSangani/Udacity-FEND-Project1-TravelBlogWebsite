@@ -1,0 +1,260 @@
+  * {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+  }
+  
+  body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+/*-------------------Typography-------------------- */  
+h1, h2, h3, h4, h5, h6{
+  letter-spacing: 0.05em;
+  margin: 0.2em 0;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+  font-weight: 600;
+}
+    
+h1{
+  font-size: 20px;
+}
+  
+h2{
+  font-size: 18px;
+}
+  
+h3{
+  font-size: 16px;
+}
+  
+h4{
+  font-size: 15px;
+}
+
+h5{
+  font-size: 14px;
+}
+
+h6{
+  font-size: 13px;
+}
+
+p{
+  text-align: left;
+  font-size: 1em;
+  margin: 5px 0 5px 0;
+}
+  
+a{
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+a:hover{
+  color: #1abc9c;
+}
+  
+b{
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+em{
+  letter-spacing: 0.05em;
+}
+
+u{
+  text-decoration: underline;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+ul{
+  margin: 10px 0 10px 0;
+}
+
+ol{
+  margin: 10px 0 10px 0;
+}
+
+li{
+  margin-left: 20px;
+}
+
+blockquote{
+  font-size: 1.2em;
+  line-height: 1.3em;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  padding: 10px 30px;
+}
+
+blockquote:first-letter{
+  float: left;
+  font-size: 2.5em;
+  margin: 0px;
+}
+  
+figcaption{
+  font-style: italic;
+  font-size: 1.1em;
+  color: #e7e7e7;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+img{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.left{
+  float: left;
+}
+  
+.right{
+  float: right;
+}
+
+.color{
+  color: #1abc9c;
+}
+
+/*--------------------------- Buttons -----------------*/
+.btn{
+  width: 150px;
+  padding: 5px;
+  font-size: 1.1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 15px 0 0 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary{
+  background-color: transparent;
+  border: 1px solid #1abc9c;
+  border-radius: 3px;
+  color: #1abc9c;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover{
+  background-color: #1abc9c;
+  border: 1px solid #1abc9c;
+  border-radius: 3px;
+  color: #fffaf0;
+  transform: scale(0.8);
+}
+
+/*---------------------------Form Elements -----------------*/
+input[type=text], input[type=submit]{
+  text-align: left;
+  width: 180px;
+  padding: 10px;
+  margin: 8px 5px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+
+input[type=submit]{
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #1abc9c;
+  border: 2px solid #1abc9c;
+  color: #fffaf0;
+  transition: all 0.3s;
+  border: none;
+}
+
+input[type=submit]:hover{
+  background-color: transparent;
+  border: 2px solid #1abc9c;
+  color: #1abc9c;
+  transform: scale(0.9);
+}
+
+/* -------------Content Style----------------- */
+.post{
+  background-color: #00000080;
+  min-width: 90%;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 5px;
+  color: #cacaca;
+  }
+
+.post-title{
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.post-author{
+  text-align: center;
+  color: #1abc9c;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  }
+
+  
+/* ------------ CTA Elements ----------------*/
+#cta{
+  grid-area: cta;
+  display: flex;
+  justify-content: center;
+  background-color: #3d4140;
+  padding: 20px;
+}
+
+#newsletter{
+  width: 60%;
+  float: left;
+  margin: 0 20px 0 20px;
+}
+
+#social{
+  width: 40%;
+  float: right;
+  margin: 0 20px 0 20px;
+} 
+
+
+/*--------------------------- Smaller Screen Style -----------------*/
+@media (max-width: 600px)
+{
+  input[type=text], input[type=submit]{
+    font-size: 0.7em;
+    width: 80%;
+  }
+
+  .post{
+    font-size: 0.9em;
+  }
+
+  .post-title{
+    font-size: 1em;
+  }
+
+  blockquote{
+    font-size: 1em;
+    line-height: 1.2em;
+    padding: 8px;
+  }
+
+  blockquote::first-letter{
+    font-size: 1.5em;
+  }
+}
