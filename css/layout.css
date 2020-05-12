@@ -1,0 +1,129 @@
+@import "style.css";
+@import "header.css";
+@import "footer.css";
+
+#grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(30px, auto);
+  gap: 4px;
+  grid-template-areas:
+    "header header"
+    "side quote"
+    "main main"
+    "post post"
+    "post post"
+    "cta cta"
+    "ft ft";
+}
+
+@media (min-width: 600px){
+  #grid-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto auto auto 40px;
+    gap: 4px;
+    grid-template-areas:
+      "header header header"
+      "side main post"
+      "quote main post"
+      "quote cta cta"
+      "ft ft ft";
+  }
+}
+
+/* ------------ Left SIdebar ----------------*/
+#sidebar{
+  display: flex;
+  flex-direction: column;
+  grid-area: side;
+  align-items: left;
+  width: 100%;
+  padding: 20px;
+  background-color: #a9a9a9;
+}
+
+#sidebar ul{
+  list-style: none;
+}
+
+#sidebar ul li{
+  font-size: 16px;
+  margin: 2px 0 0 0;
+  text-align: left;
+}
+
+#sidebar ul li a{
+  color: #4e4e4e;
+  text-decoration: underline;
+}
+
+#sidebar ul li a:hover{
+  color: #000000;
+}
+
+#quote{
+  grid-area: quote;
+  margin-top: 0x;
+  padding: 5px;
+  background-color: #088d7b;
+}
+
+.quote-text{
+  color: #ffffff;
+  text-align: center;
+}
+
+.quote-author{
+  color: #80f0e1;
+  float: right;
+  font-size: 1em;
+  margin-right: 20px;
+}
+
+/* ------------ Main ----------------*/
+#main{
+  grid-area: main;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/sg-gardens-by-the-bay.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #fffaf0;
+}
+
+/* ------------ Content ----------------*/
+#post{
+  grid-area: post;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-color: #a9a9a9;
+  color: #fffaf0;
+  min-height: 50px;
+}
+
+.post-title{
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  color: #1abc9c;
+  margin-bottom: 5px;
+}
+
+.post-subtitle{
+  font-size: 1em;
+  text-align: center;
+  font-weight: 500;
+  color: #cfcfcf;
+  border-bottom: solid 0.5px #fffaf0;
+  border-width: 90%;
+  margin-bottom: 10px;
+}
