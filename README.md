@@ -1,11 +1,10 @@
-Project Personal Blog
+# Blog Website
 
-This is a simple web-project which is about a travel blog, build using custom images, layout and styling. It has two pages:
+This is a responsive demo web-project which is about a travel blog, build using custom images, flexbox, grid and card layout and media-query. It has two pages:
 
 1. Home page
 2. Blog Page
 
-
-Technologies:
+## Technologies:
 HTML
 CSS
